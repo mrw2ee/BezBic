@@ -1,0 +1,40 @@
+Bezier surface fitting with automatic order selection (BezBic) from position data
+
+Description
+-----------
+
+This Matlab library provides tools for surface fitting from position data. There are three main steps in this process: 1, an occupancy map is constructed from a history of position data; 2, local point selection identifies a small point cloud for surface fitting; 3, a Bezier surface is fit to the point cloud. Surface order is determined automatically using the Bayesian information criterion (BIC).
+
+
+Usage
+-----
+
+Usage examples are scripts with the prefix "demo_". In particular, "demo_paper" were used to generate plots and tables for the paper.
+
+The occupancy map is maintained using the VolumeAccumulator class which has a VolumeDiscretization object.
+
+The function pointselection identifies boundary voxels from a dense binary matrix.
+
+The function fitsurface fits a Bezier surface to a point cloud and automatically determines the surface order.
+
+
+Author
+------
+
+Michael R. Walker II <mwalkerii@wustl.edu>
+Work supported by Stereotaxis, Inc.
+
+
+Citing
+------
+If you use this project in your research, please cite the following paper:
+
+Walker II, M.R. “Local Parametric Surface Approximation With Automatic Order 
+Selection From Position Data,” 2020 International Symposium on Medical Robotics 
+(ISMR), Atlanta, GA, USA, 2020, forthcoming.
+
+
+License
+-------
+
+Please see the "LICENSE" file.
